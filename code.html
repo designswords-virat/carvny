@@ -172,6 +172,28 @@ footer ul a{font-size:.9rem;transition:.2s}footer ul a:hover{color:#fff}
   .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
   .gal-grid{grid-template-columns:1fr}.gal-grid .wide{grid-column:span 1}.ft-grid{grid-template-columns:1fr}
 }
+
+/* car listings */
+.cars{background:var(--bg)}
+.cars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.3s var(--ease);display:flex;flex-direction:column}
+.ccard:hover{box-shadow:0 24px 50px -28px rgba(16,16,19,.22);transform:translateY(-5px)}
+.ccard .cimg{height:200px;overflow:hidden;position:relative;background:var(--bg-2)}
+.ccard .cimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.ccard:hover .cimg img{transform:scale(1.06)}
+.ccard .ctag{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);color:var(--ink);font-weight:600;font-size:.72rem;padding:5px 12px;border-radius:30px}
+.ccard .cbody{padding:22px;display:flex;flex-direction:column;flex:1}
+.ccard h3{font-size:1.18rem;margin-bottom:3px}
+.ccard .csub{color:var(--muted);font-size:.84rem;margin-bottom:16px}
+.cspecs{display:flex;gap:14px;flex-wrap:wrap;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:16px}
+.cspecs .s{display:flex;align-items:center;gap:6px;color:var(--ink-2);font-size:.8rem}
+.cspecs .s .material-symbols-outlined{font-size:17px;color:var(--muted)}
+.cprice{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.cprice b{font-size:1.3rem;color:var(--ink);letter-spacing:-.02em}
+.cprice b span{font-size:.8rem;color:var(--muted);font-weight:500}
+.sample-note{text-align:center;color:var(--muted);font-size:.84rem;margin-top:30px;font-family:'JetBrains Mono',monospace}
+@media(max-width:980px){.cars-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.cars-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body id="top">
@@ -184,7 +206,7 @@ footer ul a{font-size:.9rem;transition:.2s}footer ul a:hover{color:#fff}
       <a href="#problem">Problem</a>
       <a href="#guardrails">Solution</a>
       <a href="#how">How it works</a>
-      <a href="#trust">Trust</a>
+      <a href="#cars">Cars</a>
     </nav>
     <a href="#waitlist" class="btn btn--red" style="padding:10px 22px;font-size:.86rem">Join the Waitlist</a>
     <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
@@ -292,22 +314,59 @@ footer ul a{font-size:.9rem;transition:.2s}footer ul a:hover{color:#fff}
   </div>
 </section>
 
-<!-- ===== GALLERY ===== -->
-<section class="gallery" id="trust">
+<!-- ===== CARS FOR RENT ===== -->
+<section class="cars" id="cars">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">Built for Dubai</span>
-      <h2>Every drive, <b>fully accountable</b></h2>
-      <p>From Downtown to the Marina — the cars of Dubai, ready to put to work.</p>
+      <span class="eyebrow">Browse the fleet</span>
+      <h2>Cars ready to rent <b>in Dubai</b></h2>
+      <p>A peek at the kind of cars hosts will list on CARVNY — every one wrapped in the three guardrails.</p>
     </div>
-    <div class="gal-grid">
-      <figure class="tall wide reveal"><img src="./images/road-night.jpg" alt="Car on a Dubai road at night" /></figure>
-      <figure class="reveal"><img src="./images/carvny-interior.jpg" alt="Luxury car interior" /></figure>
-      <figure class="reveal"><img src="./images/hero-car.jpg" alt="Sports car on the highway" /></figure>
-      <figure class="wide reveal"><img src="./images/city-night.jpg" alt="Dubai city at night" /></figure>
-      <figure class="reveal"><img src="./images/car-interior.jpg" alt="Inside the cabin" /></figure>
-      <figure class="reveal"><img src="./images/aerial-road.jpg" alt="Open road" /></figure>
+    <div class="cars-grid">
+      <a class="ccard reveal" href="car-details.html">
+        <div class="cimg"><img src="./images/cars/gwagon.jpg" alt="Mercedes-Benz G 63" /><span class="ctag">SUV</span></div>
+        <div class="cbody">
+          <h3>Mercedes-Benz G 63</h3><div class="csub">Hosted in Dubai · Verified owner</div>
+          <div class="cspecs"><span class="s"><span class="material-symbols-outlined">airline_seat_recline_normal</span>5 Seats</span><span class="s"><span class="material-symbols-outlined">local_gas_station</span>Petrol</span><span class="s"><span class="material-symbols-outlined">settings</span>Automatic</span></div>
+          <div class="cprice"><b>AED 2,200<span> / day</span></b><span class="btn" style="padding:9px 18px;font-size:.82rem">Book</span></div>
+        </div></a>
+      <a class="ccard reveal" href="car-details.html">
+        <div class="cimg"><img src="./images/cars/lambo.jpg" alt="Lamborghini Huracán" /><span class="ctag">Sports</span></div>
+        <div class="cbody">
+          <h3>Lamborghini Huracán</h3><div class="csub">Hosted in Dubai · Verified owner</div>
+          <div class="cspecs"><span class="s"><span class="material-symbols-outlined">airline_seat_recline_normal</span>2 Seats</span><span class="s"><span class="material-symbols-outlined">local_gas_station</span>Petrol</span><span class="s"><span class="material-symbols-outlined">settings</span>Automatic</span></div>
+          <div class="cprice"><b>AED 4,500<span> / day</span></b><span class="btn" style="padding:9px 18px;font-size:.82rem">Book</span></div>
+        </div></a>
+      <a class="ccard reveal" href="car-details.html">
+        <div class="cimg"><img src="./images/cars/tesla.jpg" alt="Tesla Model 3" /><span class="ctag">Electric</span></div>
+        <div class="cbody">
+          <h3>Tesla Model 3</h3><div class="csub">Hosted in Dubai · Verified owner</div>
+          <div class="cspecs"><span class="s"><span class="material-symbols-outlined">airline_seat_recline_normal</span>5 Seats</span><span class="s"><span class="material-symbols-outlined">local_gas_station</span>Electric</span><span class="s"><span class="material-symbols-outlined">settings</span>Automatic</span></div>
+          <div class="cprice"><b>AED 650<span> / day</span></b><span class="btn" style="padding:9px 18px;font-size:.82rem">Book</span></div>
+        </div></a>
+      <a class="ccard reveal" href="car-details.html">
+        <div class="cimg"><img src="./images/cars/range-rover.jpg" alt="Range Rover Vogue" /><span class="ctag">SUV</span></div>
+        <div class="cbody">
+          <h3>Range Rover Vogue</h3><div class="csub">Hosted in Dubai · Verified owner</div>
+          <div class="cspecs"><span class="s"><span class="material-symbols-outlined">airline_seat_recline_normal</span>5 Seats</span><span class="s"><span class="material-symbols-outlined">local_gas_station</span>Petrol</span><span class="s"><span class="material-symbols-outlined">settings</span>Automatic</span></div>
+          <div class="cprice"><b>AED 1,800<span> / day</span></b><span class="btn" style="padding:9px 18px;font-size:.82rem">Book</span></div>
+        </div></a>
+      <a class="ccard reveal" href="car-details.html">
+        <div class="cimg"><img src="./images/cars/porsche.jpg" alt="Porsche Panamera" /><span class="ctag">Sedan</span></div>
+        <div class="cbody">
+          <h3>Porsche Panamera</h3><div class="csub">Hosted in Dubai · Verified owner</div>
+          <div class="cspecs"><span class="s"><span class="material-symbols-outlined">airline_seat_recline_normal</span>4 Seats</span><span class="s"><span class="material-symbols-outlined">local_gas_station</span>Petrol</span><span class="s"><span class="material-symbols-outlined">settings</span>Automatic</span></div>
+          <div class="cprice"><b>AED 1,500<span> / day</span></b><span class="btn" style="padding:9px 18px;font-size:.82rem">Book</span></div>
+        </div></a>
+      <a class="ccard reveal" href="car-details.html">
+        <div class="cimg"><img src="./images/cars/bmw.jpg" alt="BMW 7 Series" /><span class="ctag">Sedan</span></div>
+        <div class="cbody">
+          <h3>BMW 7 Series</h3><div class="csub">Hosted in Dubai · Verified owner</div>
+          <div class="cspecs"><span class="s"><span class="material-symbols-outlined">airline_seat_recline_normal</span>5 Seats</span><span class="s"><span class="material-symbols-outlined">local_gas_station</span>Petrol</span><span class="s"><span class="material-symbols-outlined">settings</span>Automatic</span></div>
+          <div class="cprice"><b>AED 1,200<span> / day</span></b><span class="btn" style="padding:9px 18px;font-size:.82rem">Book</span></div>
+        </div></a>
     </div>
+    <div class="sample-note">Sample listings shown for preview — real inventory goes live at launch.</div>
   </div>
 </section>
 
