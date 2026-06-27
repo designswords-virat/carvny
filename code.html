@@ -5,182 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CARVNY — Your Car. Their Journey. Everyone Wins.</title>
 <meta name="description" content="CARVNY is Dubai's first trusted peer-to-peer car rental marketplace — built on Frozen-Hold deposits, 360° Check-In and Live Fine Tracking, so every drive is fully accountable." />
-<meta name="theme-color" content="#0A0A0C" />
+<meta name="theme-color" content="#FFFFFF" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="CARVNY — Dubai's trusted peer-to-peer car rental marketplace" />
 <meta property="og:description" content="Owners get paid, renters get the keys — without the deposit games, inspection disputes, or hidden RTA surprises." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23E11D2A'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='800' font-size='36' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
 <style>
-/* ===== ui-ux-pro-max + NIO cinematic · Inter · dark #0A0A0C + Carvny red ===== */
+/* ===== Carvatrix theme (light, clean) + Carvny content · Plus Jakarta Sans · red accent ===== */
 :root{
-  --ink:#0A0A0C; --ink-2:#131316; --ink-3:#1C1C21;
-  --red:#E11D2A; --red-2:#FF3340;
-  --white:#FFFFFF; --muted:#9A9AA4; --muted-2:#6B6B74;
-  --line:rgba(255,255,255,.12); --line-2:rgba(255,255,255,.06);
-  --maxw:1240px; --ease:cubic-bezier(.22,.61,.36,1);
+  --bg:#FFFFFF; --bg-2:#F5F6F8; --bg-3:#EDEFF2;
+  --ink:#101013; --ink-2:#3A3D44; --muted:#71757E;
+  --red:#E11D2A; --red-2:#C5131F; --red-soft:#FBE9EA;
+  --line:#E6E8EC; --card:#FFFFFF;
+  --maxw:1180px; --ease:cubic-bezier(.22,.61,.36,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-weight:600;line-height:1.05;letter-spacing:-.02em}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink-2);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{color:var(--ink);font-weight:800;line-height:1.1;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .mono{font-family:'JetBrains Mono',monospace}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.eyebrow{font-family:'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:var(--red);display:inline-flex;align-items:center;gap:12px}
-.eyebrow::before{content:"";width:24px;height:1px;background:var(--red)}
-.lead{font-size:1.14rem;color:var(--muted);max-width:62ch;font-weight:300}
-section{padding:clamp(72px,9vw,128px) 0}
-.sec-head{max-width:760px;margin-bottom:clamp(40px,5vw,64px)}
-.sec-head h2{font-size:clamp(2rem,4.6vw,3.3rem);margin:18px 0 16px;font-weight:600}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.8rem;letter-spacing:.02em;color:var(--red);background:var(--red-soft);padding:7px 16px;border-radius:30px}
+.eyebrow .material-symbols-outlined{font-size:16px}
+.lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
+section{padding:clamp(64px,8vw,104px) 0}
+.center{text-align:center;max-width:680px;margin:0 auto clamp(40px,5vw,60px)}
+.center h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:500;margin:18px 0 14px}
+.center h2 b{font-weight:800}
+.center p{color:var(--muted)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
-.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:500;font-size:.92rem;padding:14px 28px;border-radius:40px;
-  background:var(--white);color:var(--ink);cursor:pointer;transition:.3s var(--ease);border:1px solid var(--white)}
-.btn:hover{background:transparent;color:var(--white)}
-.btn--red{background:var(--red);border-color:var(--red);color:#fff}
-.btn--red:hover{background:var(--red-2);border-color:var(--red-2);color:#fff}
-.btn--ghost{background:transparent;color:var(--white);border-color:var(--line)}
-.btn--ghost:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
-.lnk{display:inline-flex;align-items:center;gap:7px;color:var(--white);font-weight:500;transition:gap .25s}
-.lnk:hover{gap:12px;color:var(--red-2)}
-.lnk .material-symbols-outlined{font-size:19px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.92rem;padding:13px 26px;border-radius:40px;
+  background:var(--ink);color:#fff;cursor:pointer;transition:.25s var(--ease);border:1px solid var(--ink)}
+.btn:hover{background:#000;transform:translateY(-2px)}
+.btn--red{background:var(--red);border-color:var(--red)}
+.btn--red:hover{background:var(--red-2);border-color:var(--red-2)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{background:var(--bg-2);border-color:var(--ink);transform:translateY(-2px)}
+.lnk{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-weight:600;font-size:.92rem;transition:gap .2s}
+.lnk:hover{gap:11px;color:var(--red)}
+.lnk .material-symbols-outlined{font-size:18px}
 
 /* nav */
-header.nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:.4s var(--ease)}
-header.nav.solid{background:rgba(10,10,12,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2)}
+header.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:.3s}
+header.nav.solid{border-bottom-color:var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
-.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.04em;font-size:1.15rem}
-.brand .mk{width:30px;height:30px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900}
-.brand small{font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--muted);font-size:.6rem;letter-spacing:.2em;margin-left:2px}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{font-size:.88rem;font-weight:400;color:rgba(255,255,255,.82);transition:.2s}
-.nav-links a:hover{color:#fff}
-.nav-cta{display:flex;gap:10px;align-items:center}
-.nav-toggle{display:none;background:none;border:0;cursor:pointer;color:#fff}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;font-size:1.18rem;color:var(--ink)}
+.brand .mk{width:30px;height:30px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:900}
+.brand small{font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--muted);font-size:.6rem;letter-spacing:.18em}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--ink-2);transition:.2s}
+.nav-links a:hover{color:var(--red)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
 .nav-toggle .material-symbols-outlined{font-size:30px}
 
 /* hero */
-.hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,.2) 36%,rgba(10,10,12,.62) 68%,rgba(10,10,12,.97) 100%)}
-.hero-in{position:relative;z-index:2;width:100%;padding-bottom:clamp(56px,8vh,110px)}
-.hero h1{font-size:clamp(2.8rem,7vw,6rem);font-weight:600;letter-spacing:-.035em;max-width:16ch}
-.hero h1 em{font-style:italic;font-weight:300}
-.hero h1 .r{color:var(--red-2)}
-.hero p.sub{color:rgba(255,255,255,.82);max-width:58ch;margin:24px 0 34px;font-size:1.18rem;font-weight:300}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-meta{display:flex;justify-content:space-between;gap:16px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);padding-top:22px;margin-top:46px}
-.hero-meta .dot{color:var(--red-2)}
-.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px}
-.scroll-cue .material-symbols-outlined{animation:bob 1.8s var(--ease) infinite}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
-@media(prefers-reduced-motion:reduce){.scroll-cue .material-symbols-outlined{animation:none}}
+.hero{padding:clamp(48px,6vw,80px) 0 0;text-align:center;background:radial-gradient(120% 80% at 50% 0%,var(--bg-2),var(--bg) 60%)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);font-weight:500;letter-spacing:-.03em;max-width:16ch;margin:24px auto 0}
+.hero h1 b{font-weight:800}
+.hero h1 .r{color:var(--red);font-weight:800}
+.hero p.sub{color:var(--muted);max-width:58ch;margin:22px auto 30px;font-size:1.15rem}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-img{margin-top:clamp(40px,5vw,64px);position:relative}
+.hero-img img{width:100%;max-height:640px;object-fit:cover;border-radius:26px 26px 0 0}
+.hero-img::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(transparent,var(--bg))}
 
-/* problem */
-.problem{background:var(--ink)}
-.tag-no{font-family:'JetBrains Mono',monospace;color:var(--red);font-size:.78rem;letter-spacing:.14em}
-.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.pcard{background:var(--ink-2);border:1px solid var(--line-2);border-radius:18px;padding:34px;transition:.3s var(--ease)}
-.pcard:hover{border-color:var(--line);transform:translateY(-4px)}
-.pcard .ic{width:48px;height:48px;border-radius:12px;background:rgba(225,29,42,.12);display:flex;align-items:center;justify-content:center;color:var(--red-2);margin-bottom:22px}
+/* trust strip */
+.trust-strip{border-bottom:1px solid var(--line);background:var(--bg)}
+.trust-strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:18px 40px;padding-top:30px;padding-bottom:30px}
+.tchip{display:flex;align-items:center;gap:9px;color:var(--muted);font-weight:600;font-size:.92rem}
+.tchip .material-symbols-outlined{font-size:21px;color:var(--red)}
+
+/* problem cards */
+.problem{background:var(--bg)}
+.card-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px;transition:.3s var(--ease)}
+.pcard:hover{box-shadow:0 24px 50px -28px rgba(16,16,19,.2);transform:translateY(-5px);border-color:transparent}
+.pcard .ic{width:50px;height:50px;border-radius:14px;background:var(--red-soft);display:flex;align-items:center;justify-content:center;color:var(--red);margin-bottom:22px}
 .pcard .ic .material-symbols-outlined{font-size:26px}
-.pcard h3{font-size:1.35rem;margin-bottom:10px}
-.pcard p{color:var(--muted);font-size:.96rem;font-weight:300;margin-bottom:20px}
-.pcard .stat{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--red-2);border-top:1px solid var(--line-2);padding-top:16px}
+.pcard h3{font-size:1.3rem;margin-bottom:10px}
+.pcard p{color:var(--muted);font-size:.96rem;margin-bottom:20px}
+.pcard .stat{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--red);border-top:1px solid var(--line);padding-top:16px}
 
 /* guardrails */
-.guard{background:var(--ink-2)}
-.guard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.gcard{background:var(--ink);border:1px solid var(--line-2);border-radius:18px;padding:34px;display:flex;flex-direction:column;transition:.3s var(--ease)}
-.gcard:hover{border-color:rgba(225,29,42,.4)}
-.gcard .gnum{font-family:'JetBrains Mono',monospace;color:var(--red);font-size:.78rem;letter-spacing:.14em;margin-bottom:18px}
-.gcard h3{font-size:1.5rem;margin-bottom:10px}
-.gcard p{color:var(--muted);font-size:.96rem;font-weight:300;margin-bottom:22px}
-.gdemo{margin-top:auto;background:var(--ink-3);border:1px solid var(--line-2);border-radius:12px;padding:18px;font-family:'JetBrains Mono',monospace}
-.gdemo .big{font-size:1.6rem;color:#fff;letter-spacing:.04em}
-.gdemo .small{font-size:.72rem;color:var(--muted);margin-top:4px}
+.guard{background:var(--bg-2)}
+.gcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column;transition:.3s var(--ease)}
+.gcard:hover{box-shadow:0 24px 50px -28px rgba(16,16,19,.2);transform:translateY(-5px)}
+.gcard .gnum{font-family:'JetBrains Mono',monospace;color:var(--red);font-size:.76rem;letter-spacing:.1em;margin-bottom:16px}
+.gcard h3{font-size:1.45rem;margin-bottom:10px}
+.gcard p{color:var(--muted);font-size:.96rem;margin-bottom:22px}
+.gdemo{margin-top:auto;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:18px;font-family:'JetBrains Mono',monospace}
+.gdemo .big{font-size:1.7rem;color:var(--ink);letter-spacing:.04em}
+.gdemo .small{font-size:.72rem;color:var(--muted);margin-top:2px}
 .gphotos{display:flex;gap:8px}
-.gphotos span{flex:1;text-align:center;font-size:.66rem;color:var(--muted);background:var(--ink-2);border:1px solid var(--line-2);border-radius:8px;padding:10px 4px}
+.gphotos span{flex:1;text-align:center;font-size:.66rem;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 4px}
 .gfines{display:flex;flex-direction:column;gap:8px;font-size:.74rem}
 .gfines .row{display:flex;justify-content:space-between;color:var(--muted)}
-.gfines .row b{color:var(--red-2);font-weight:500}
-.gtag{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted-2);margin-top:14px;letter-spacing:.06em}
-
-/* cinematic band */
-.band{position:relative;overflow:hidden;min-height:60vh;display:flex;align-items:center;text-align:center;justify-content:center;color:#fff}
-.band-bg{position:absolute;inset:0;z-index:0}.band-bg img{width:100%;height:100%;object-fit:cover}
-.band-bg::after{content:"";position:absolute;inset:0;background:rgba(10,10,12,.62)}
-.band-in{position:relative;z-index:2;max-width:760px;padding:0 24px}
-.band h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:600;letter-spacing:-.03em}
+.gfines .row b{color:var(--red);font-weight:500}
+.gtag{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);margin-top:14px;letter-spacing:.04em}
 
 /* how it works */
-.how{background:var(--ink)}
-.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,48px)}
-.hcol{background:var(--ink-2);border:1px solid var(--line-2);border-radius:20px;padding:clamp(28px,3vw,42px)}
-.hcol .pill{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red-2);border:1px solid var(--line);border-radius:30px;padding:6px 14px;display:inline-block}
-.hcol h3{font-size:1.7rem;margin:18px 0 26px;font-weight:600}
-.step{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line-2)}
-.step .n{font-family:'JetBrains Mono',monospace;color:var(--red);font-size:.86rem;flex:none;width:34px}
-.step h4{font-size:1.1rem;font-weight:600;margin-bottom:4px}
-.step p{color:var(--muted);font-size:.92rem;font-weight:300}
-.hcol .btn{margin-top:24px}
+.how{background:var(--bg)}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hcol{background:var(--bg-2);border:1px solid var(--line);border-radius:24px;padding:clamp(28px,3vw,40px)}
+.hcol .pill{display:inline-block;font-weight:600;font-size:.78rem;color:var(--red);background:var(--red-soft);border-radius:30px;padding:6px 14px}
+.hcol h3{font-size:1.6rem;margin:18px 0 24px}
+.step{display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.step .n{font-family:'JetBrains Mono',monospace;color:var(--red);font-size:.86rem;flex:none;width:32px;font-weight:600}
+.step h4{font-size:1.08rem;margin-bottom:3px}
+.step p{color:var(--muted);font-size:.92rem}
+.hcol .btn{margin-top:22px}
 
-/* trust */
-.trust{background:var(--ink-2)}
-.trust-row{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.tbadge{text-align:center;padding:30px 18px;border:1px solid var(--line-2);border-radius:16px;background:var(--ink);transition:.3s}
-.tbadge:hover{border-color:var(--line);transform:translateY(-4px)}
-.tbadge .material-symbols-outlined{font-size:34px;color:var(--red-2)}
-.tbadge h4{font-size:1.02rem;margin:14px 0 4px;font-weight:600}
-.tbadge span{font-size:.8rem;color:var(--muted);font-weight:300}
+/* gallery */
+.gallery{background:var(--bg-2)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+.gal-grid figure{border-radius:18px;overflow:hidden;position:relative}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.gal-grid figure:hover img{transform:scale(1.06)}
+.gal-grid .tall{grid-row:span 2}.gal-grid .wide{grid-column:span 2}
 
 /* waitlist */
-.wait{background:var(--ink)}
+.wait{background:var(--bg)}
 .wait-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.wcard{border-radius:20px;overflow:hidden;position:relative;min-height:420px;display:flex;align-items:flex-end;color:#fff}
+.wcard{border-radius:24px;overflow:hidden;position:relative;min-height:420px;display:flex;align-items:flex-end;color:#fff}
 .wcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.wcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.35) 0%,rgba(10,10,12,.92) 75%)}
-.wcard .c{position:relative;z-index:2;padding:38px;width:100%}
-.wcard .k{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red-2)}
-.wcard h3{font-size:1.6rem;margin:12px 0 10px;font-weight:600;max-width:18ch}
-.wcard p{color:rgba(255,255,255,.8);font-size:.95rem;font-weight:300;margin-bottom:20px;max-width:42ch}
+.wcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,16,19,.15) 0%,rgba(16,16,19,.9) 78%)}
+.wcard .c{position:relative;z-index:2;padding:36px;width:100%}
+.wcard .k{font-weight:600;font-size:.8rem;letter-spacing:.02em;color:#fff;background:var(--red);display:inline-block;padding:5px 14px;border-radius:30px}
+.wcard h3{color:#fff;font-size:1.55rem;margin:14px 0 10px;max-width:18ch}
+.wcard p{color:rgba(255,255,255,.82);font-size:.95rem;margin-bottom:20px;max-width:42ch}
 .wform{display:flex;gap:10px;flex-wrap:wrap}
-.wform input{flex:1;min-width:180px;padding:13px 16px;border-radius:30px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font-family:inherit;font-size:.92rem}
-.wform input::placeholder{color:var(--muted)}
-.wform input:focus{outline:none;border-color:var(--red);background:rgba(255,255,255,.1)}
-.wnote{font-size:.74rem;color:var(--muted-2);margin-top:12px;font-family:'JetBrains Mono',monospace}
+.wform input{flex:1;min-width:170px;padding:13px 16px;border-radius:30px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-family:inherit;font-size:.92rem}
+.wform input::placeholder{color:rgba(255,255,255,.7)}
+.wform input:focus{outline:none;border-color:#fff;background:rgba(255,255,255,.18)}
+.wnote{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:rgba(255,255,255,.6);margin-top:12px}
 
 /* footer */
-footer{background:#070708;color:var(--muted);padding:72px 0 30px;border-top:1px solid var(--line-2)}
-.ft-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;padding-bottom:42px;border-bottom:1px solid var(--line-2)}
+footer{background:var(--ink);color:#9A9AA4;padding:70px 0 30px}
+.ft-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.1)}
 .ft-brand .brand{color:#fff;margin-bottom:16px}
-.ft-brand p{font-size:.92rem;max-width:38ch;font-weight:300}
+.ft-brand .brand small{color:#9A9AA4}
+.ft-brand p{font-size:.92rem;max-width:38ch}
 .ft-brand .em{display:inline-flex;align-items:center;gap:8px;color:#fff;margin-top:16px;font-size:.92rem}
-.ft-brand .em .material-symbols-outlined{font-size:18px;color:var(--red-2)}
-footer h5{color:#fff;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.ft-brand .em .material-symbols-outlined{font-size:18px;color:var(--red)}
+footer h5{color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-footer ul a{font-size:.9rem;font-weight:300;transition:.2s}
-footer ul a:hover{color:#fff}
+footer ul a{font-size:.9rem;transition:.2s}footer ul a:hover{color:#fff}
 .ft-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:24px;font-size:.82rem;font-family:'JetBrains Mono',monospace}
 
 @media(max-width:980px){
-  .prob-grid,.guard-grid,.how-grid,.wait-grid{grid-template-columns:1fr}
-  .trust-row{grid-template-columns:repeat(2,1fr)}
+  .card-grid-3,.how-grid,.wait-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
   .ft-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
   .nav-links{display:none}.nav-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:rgba(10,10,12,.98);padding:24px;gap:18px;border-bottom:1px solid var(--line)}
-  .trust-row{grid-template-columns:1fr}.ft-grid{grid-template-columns:1fr}
-  .hero-meta{flex-wrap:wrap;gap:8px}
+  .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
+  .gal-grid{grid-template-columns:1fr}.gal-grid .wide{grid-column:span 1}.ft-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -189,46 +179,52 @@ footer ul a:hover{color:#fff}
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a href="#top" class="brand"><span class="mk">C</span>CARVNY<small>DXB</small></a>
+    <a href="#top" class="brand"><span class="mk">C</span>CARVNY <small>DXB</small></a>
     <nav class="nav-links" id="navlinks">
       <a href="#problem">Problem</a>
       <a href="#guardrails">Solution</a>
       <a href="#how">How it works</a>
       <a href="#trust">Trust</a>
     </nav>
-    <div class="nav-cta">
-      <a href="#host" class="lnk" style="font-size:.86rem">Host Your Car</a>
-      <a href="#rent" class="btn btn--red" style="padding:9px 20px;font-size:.84rem">Rent a Car</a>
-    </div>
+    <a href="#waitlist" class="btn btn--red" style="padding:10px 22px;font-size:.86rem">Join the Waitlist</a>
     <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="hero-bg"><img src="./images/carvny-hero.jpg" alt="A luxury red sports car cruising Downtown Dubai past Burj Khalifa" style="object-position:center 62%" /></div>
-  <div class="wrap hero-in">
-    <span class="eyebrow">Dubai · UAE — Vol. 01 · Pre-Launch 2026</span>
-    <h1 style="margin-top:22px">Your car. <em>Their journey.</em> <span class="r">Everyone wins.</span></h1>
-    <p class="sub">Dubai's first trusted peer-to-peer car rental marketplace. Built so owners get paid and renters get the keys — without the deposit games, inspection disputes, or hidden RTA surprises.</p>
+  <div class="wrap">
+    <span class="eyebrow reveal" style="opacity:1;transform:none"><span class="material-symbols-outlined">location_on</span>Dubai · UAE — Pre-Launch 2026</span>
+    <h1>Your car. <b>Their journey.</b> <span class="r">Everyone wins.</span></h1>
+    <p class="sub">Dubai's first trusted peer-to-peer car rental marketplace — built so owners get paid and renters get the keys, without the deposit games, inspection disputes or hidden RTA surprises.</p>
     <div class="hero-cta">
-      <a href="#host" class="btn btn--red">Host Your Car</a>
-      <a href="#rent" class="btn btn--ghost">Rent a Car</a>
+      <a href="#waitlist" class="btn btn--red">Host Your Car</a>
+      <a href="#waitlist" class="btn btn--ghost">Rent a Car</a>
     </div>
-    <div class="hero-meta"><span><span class="dot">●</span> Frozen-Hold Deposits</span><span>360° Check-In</span><span>Live Fine Tracking</span><span>Every drive, accountable</span></div>
   </div>
-  <a href="#problem" class="scroll-cue">Scroll<span class="material-symbols-outlined">expand_more</span></a>
+  <div class="wrap hero-img reveal" style="opacity:1;transform:none"><img src="./images/carvny-hero.jpg" alt="A luxury red sports car cruising Downtown Dubai past Burj Khalifa" style="object-position:center 60%" /></div>
 </section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="tchip"><span class="material-symbols-outlined">verified_user</span>RTA Compliant</div>
+    <div class="tchip"><span class="material-symbols-outlined">badge</span>Verified Hosts</div>
+    <div class="tchip"><span class="material-symbols-outlined">lock</span>PCI-DSS · 3D Secure</div>
+    <div class="tchip"><span class="material-symbols-outlined">support_agent</span>24/7 Dubai Support</div>
+    <div class="tchip"><span class="material-symbols-outlined">workspace_premium</span>UAE Licensed</div>
+  </div>
+</div>
 
 <!-- ===== PROBLEM ===== -->
 <section class="problem" id="problem">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="tag-no">§01 — The Problem</span>
-      <h2 style="margin-top:14px">Peer-to-peer rentals are broken in three places</h2>
-      <p class="lead">Renting from a stranger today means trusting their word on the three most expensive parts of the transaction. We watched it go wrong one too many times.</p>
+    <div class="center reveal">
+      <span class="eyebrow">§01 — The Problem</span>
+      <h2>Peer-to-peer rentals are <b>broken in three places</b></h2>
+      <p>Renting from a stranger today means trusting their word on the three most expensive parts of the transaction. We watched it go wrong one too many times.</p>
     </div>
-    <div class="prob-grid">
+    <div class="card-grid-3">
       <div class="pcard reveal"><div class="ic"><span class="material-symbols-outlined">account_balance_wallet</span></div><h3>Deposit Fraud</h3><p>Renters wire thousands as deposits with zero transparency on if — or when — that money comes back.</p><div class="stat">AED 5,000+ typical at risk</div></div>
       <div class="pcard reveal"><div class="ic"><span class="material-symbols-outlined">photo_camera</span></div><h3>No Inspection Record</h3><p>Pickup disputes turn into he-said-she-said. No timestamped proof of the car's condition before the keys changed hands.</p><div class="stat">9 of 10 disputes unresolved</div></div>
       <div class="pcard reveal"><div class="ic"><span class="material-symbols-outlined">receipt_long</span></div><h3>Hidden Fines</h3><p>Surprise RTA fines, Salik tolls and Dubai Police charges arrive weeks later — long after the trip is over.</p><div class="stat">AED 600 avg surprise bill</div></div>
@@ -236,29 +232,29 @@ footer ul a:hover{color:#fff}
   </div>
 </section>
 
-<!-- ===== GUARDRAILS (Solution) ===== -->
+<!-- ===== GUARDRAILS ===== -->
 <section class="guard" id="guardrails">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="tag-no">§02 — How CARVNY fixes it</span>
-      <h2 style="margin-top:14px">Three guardrails. Zero guesswork.</h2>
-      <p class="lead">We didn't reinvent rentals — we rebuilt the parts everyone keeps getting burned by. Every trip on CARVNY is wrapped in three layers of accountability.</p>
+    <div class="center reveal">
+      <span class="eyebrow">§02 — The Solution</span>
+      <h2>Three <b>guardrails</b>. Zero guesswork.</h2>
+      <p>We didn't reinvent rentals — we rebuilt the parts everyone keeps getting burned by. Every trip on CARVNY is wrapped in three layers of accountability.</p>
     </div>
-    <div class="guard-grid">
+    <div class="card-grid-3">
       <div class="gcard reveal">
-        <span class="gnum">01 — Deposits</span><h3>Frozen Hold</h3>
+        <span class="gnum">01 — DEPOSITS</span><h3>Frozen Hold</h3>
         <p>Your deposit isn't a charge — it's a pre-authorisation hold on your card. Watch the live countdown to auto-release the moment the trip ends.</p>
         <div class="gdemo"><div class="big">02:14:36</div><div class="small">until auto-release</div></div>
         <span class="gtag">Pre-auth · not a charge</span>
       </div>
       <div class="gcard reveal">
-        <span class="gnum">02 — Condition</span><h3>360° Check-In</h3>
+        <span class="gnum">02 — CONDITION</span><h3>360° Check-In</h3>
         <p>Photograph all four sides of the car before you drive. Timestamped, GPS-stamped and stored — both sides can pull receipts in seconds.</p>
         <div class="gdemo gphotos"><span>Front</span><span>Rear</span><span>Left</span><span>Right</span></div>
         <span class="gtag">Timestamped · stored</span>
       </div>
       <div class="gcard reveal">
-        <span class="gnum">03 — Fines</span><h3>Live Fine Tracking</h3>
+        <span class="gnum">03 — FINES</span><h3>Live Fine Tracking</h3>
         <p>RTA fines, Salik tolls and Dubai Police charges stream in real time — visible to both host and renter the moment they hit.</p>
         <div class="gdemo gfines"><div class="row">Salik · Al Maktoum <b>AED 4.00</b></div><div class="row">Salik · Al Garhoud <b>AED 4.00</b></div><div class="row">RTA · Speeding <b>AED 600.00</b></div></div>
         <span class="gtag">Real-time · no surprises</span>
@@ -267,58 +263,50 @@ footer ul a:hover{color:#fff}
   </div>
 </section>
 
-<!-- ===== CINEMATIC BAND ===== -->
-<section class="band">
-  <div class="band-bg"><img src="./images/road-night.jpg" alt="Every drive, fully accountable" /></div>
-  <div class="band-in reveal">
-    <span class="eyebrow" style="justify-content:center">On the cover · Downtown Dubai</span>
-    <h2 style="margin-top:18px">Every drive, fully accountable.</h2>
-  </div>
-</section>
-
 <!-- ===== HOW IT WORKS ===== -->
 <section class="how" id="how">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="tag-no">§03 — How it works</span>
-      <h2 style="margin-top:14px">Two sides. One playbook.</h2>
-      <p class="lead">Whether you're putting your car to work or borrowing one for the weekend, the path is short and the rules are the same for everyone.</p>
+    <div class="center reveal">
+      <span class="eyebrow">§03 — How it works</span>
+      <h2>Two sides. <b>One playbook.</b></h2>
+      <p>Whether you're putting your car to work or borrowing one for the weekend, the path is short and the rules are the same for everyone.</p>
     </div>
     <div class="how-grid">
-      <div class="hcol reveal" id="host">
+      <div class="hcol reveal">
         <span class="pill">For Hosts · Passive income</span>
         <h3>Turn idle hours into rent cheques.</h3>
-        <div class="step"><div class="n">01</div><div><h4>List your car in minutes</h4><p>Snap photos, set your price, choose your availability — we handle verification, KYC and the legal layer.</p></div></div>
+        <div class="step"><div class="n">01</div><div><h4>List your car in minutes</h4><p>Snap photos, set your price, choose availability — we handle verification, KYC and the legal layer.</p></div></div>
         <div class="step"><div class="n">02</div><div><h4>Get verified booking requests</h4><p>Only screened, ID-verified renters. Approve trips with one tap and keep full control of your calendar.</p></div></div>
-        <div class="step"><div class="n">03</div><div><h4>Earn passive income every month</h4><p>Your car works for you while it sits idle. Payouts land straight in your UAE bank, fines and tolls auto-deducted.</p></div></div>
-        <a href="#host-form" class="btn btn--red">Host Your Car</a>
+        <div class="step"><div class="n">03</div><div><h4>Earn passive income every month</h4><p>Payouts land straight in your UAE bank — fines and tolls auto-deducted.</p></div></div>
+        <a href="#waitlist" class="btn btn--red">Host Your Car</a>
       </div>
-      <div class="hcol reveal" id="rent">
+      <div class="hcol reveal">
         <span class="pill">For Renters · Full transparency</span>
         <h3>The drive is yours. The guardrails are ours.</h3>
         <div class="step"><div class="n">01</div><div><h4>Search available cars in Dubai</h4><p>Filter by neighbourhood, make, model and trip length. Real photos, real reviews, real-time availability.</p></div></div>
         <div class="step"><div class="n">02</div><div><h4>Book instantly with full transparency</h4><p>Frozen-hold deposit, live countdown, transparent fees. You see every line item before you drive.</p></div></div>
         <div class="step"><div class="n">03</div><div><h4>Drive with complete confidence</h4><p>360° check-in protects you. Live fine tracking keeps surprises out. Roadside backup is a tap away.</p></div></div>
-        <a href="#rent-form" class="btn btn--ghost">Rent a Car</a>
+        <a href="#waitlist" class="btn btn--ghost">Rent a Car</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== TRUST ===== -->
-<section class="trust" id="trust">
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="trust">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="tag-no">§04 — Trust, in writing</span>
-      <h2 style="margin-top:14px">Built for the way Dubai actually rents</h2>
-      <p class="lead">Every layer of CARVNY meets the bar set by UAE regulators and the people who depend on their cars every day.</p>
+    <div class="center reveal">
+      <span class="eyebrow">Built for Dubai</span>
+      <h2>Every drive, <b>fully accountable</b></h2>
+      <p>From Downtown to the Marina — the cars of Dubai, ready to put to work.</p>
     </div>
-    <div class="trust-row">
-      <div class="tbadge reveal"><span class="material-symbols-outlined">verified_user</span><h4>RTA Compliant</h4><span>Roads &amp; Transport Authority</span></div>
-      <div class="tbadge reveal"><span class="material-symbols-outlined">badge</span><h4>Verified Hosts</h4><span>ID + ownership checked</span></div>
-      <div class="tbadge reveal"><span class="material-symbols-outlined">lock</span><h4>Secure Payments</h4><span>PCI-DSS · 3D Secure</span></div>
-      <div class="tbadge reveal"><span class="material-symbols-outlined">support_agent</span><h4>24/7 Support</h4><span>Dubai-based concierge</span></div>
-      <div class="tbadge reveal"><span class="material-symbols-outlined">workspace_premium</span><h4>UAE Licensed</h4><span>Operating in Dubai</span></div>
+    <div class="gal-grid">
+      <figure class="tall wide reveal"><img src="./images/road-night.jpg" alt="Car on a Dubai road at night" /></figure>
+      <figure class="reveal"><img src="./images/carvny-interior.jpg" alt="Luxury car interior" /></figure>
+      <figure class="reveal"><img src="./images/hero-car.jpg" alt="Sports car on the highway" /></figure>
+      <figure class="wide reveal"><img src="./images/city-night.jpg" alt="Dubai city at night" /></figure>
+      <figure class="reveal"><img src="./images/car-interior.jpg" alt="Inside the cabin" /></figure>
+      <figure class="reveal"><img src="./images/aerial-road.jpg" alt="Open road" /></figure>
     </div>
   </div>
 </section>
@@ -326,14 +314,14 @@ footer ul a:hover{color:#fff}
 <!-- ===== WAITLIST ===== -->
 <section class="wait" id="waitlist">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="tag-no">§05 — Join the waitlist</span>
-      <h2 style="margin-top:14px">CARVNY is coming to Dubai. Be first when we launch.</h2>
-      <p class="lead">Whether you have a car to put to work or keys to find for your next trip — your seat is here.</p>
+    <div class="center reveal">
+      <span class="eyebrow">§04 — Join the waitlist</span>
+      <h2>CARVNY is coming to Dubai. <b>Be first when we launch.</b></h2>
+      <p>Whether you have a car to put to work or keys to find for your next trip — your seat is here.</p>
     </div>
     <div class="wait-grid">
-      <div class="wcard reveal" id="host-form">
-        <img src="./images/car-interior.jpg" alt="List your car" />
+      <div class="wcard reveal">
+        <img src="./images/carvny-interior.jpg" alt="List your car" />
         <div class="c">
           <span class="k">I want to list my car</span>
           <h3>Earn from the hours your car already sits idle.</h3>
@@ -345,8 +333,8 @@ footer ul a:hover{color:#fff}
           <div class="wnote">No spam · Unsubscribe anytime</div>
         </div>
       </div>
-      <div class="wcard reveal" id="rent-form">
-        <img src="./images/road-night.jpg" alt="Rent a car" />
+      <div class="wcard reveal">
+        <img src="./images/hero-car.jpg" alt="Rent a car" />
         <div class="c">
           <span class="k">I want to rent a car</span>
           <h3>Drive Dubai without the deposit drama.</h3>
@@ -367,37 +355,22 @@ footer ul a:hover{color:#fff}
   <div class="wrap">
     <div class="ft-grid">
       <div class="ft-brand">
-        <a href="#top" class="brand"><span class="mk">C</span>CARVNY<small>DXB</small></a>
-        <p>The trusted peer-to-peer car rental marketplace for Dubai. Built with Frozen Hold deposits, 360° Check-In, and Live Fine Tracking — so every drive is accountable.</p>
+        <a href="#top" class="brand"><span class="mk">C</span>CARVNY <small>DXB</small></a>
+        <p>The trusted peer-to-peer car rental marketplace for Dubai. Built with Frozen Hold deposits, 360° Check-In and Live Fine Tracking — so every drive is accountable.</p>
         <a href="mailto:support@carvny.com" class="em"><span class="material-symbols-outlined">mail</span>support@carvny.com</a>
-        <div class="ft-bottom" style="border:0;padding:8px 0 0;color:var(--muted)"><span>Dubai, UAE — Launching 2026</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.78rem;margin-top:8px">Dubai, UAE — Launching 2026</div>
       </div>
       <div>
         <h5>Product</h5>
-        <ul>
-          <li><a href="#how">How it works</a></li>
-          <li><a href="#host">For Hosts</a></li>
-          <li><a href="#rent">For Renters</a></li>
-          <li><a href="#trust">Trust &amp; Safety</a></li>
-        </ul>
+        <ul><li><a href="#how">How it works</a></li><li><a href="#how">For Hosts</a></li><li><a href="#how">For Renters</a></li><li><a href="#guardrails">Guardrails</a></li></ul>
       </div>
       <div>
         <h5>Company</h5>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="mailto:support@carvny.com">Contact</a></li>
-        </ul>
+        <ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="mailto:support@carvny.com">Contact</a></li></ul>
       </div>
       <div>
         <h5>Legal</h5>
-        <ul>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Cookies</a></li>
-          <li><a href="#">RTA Compliance</a></li>
-        </ul>
+        <ul><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li><li><a href="#">Cookies</a></li><li><a href="#">RTA Compliance</a></li></ul>
       </div>
     </div>
     <div class="ft-bottom">
@@ -409,13 +382,13 @@ footer ul a:hover{color:#fff}
 
 <script>
   const nav=document.getElementById('nav');
-  const onScroll=()=>nav.classList.toggle('solid',window.scrollY>40);
+  const onScroll=()=>nav.classList.toggle('solid',window.scrollY>20);
   onScroll();addEventListener('scroll',onScroll,{passive:true});
   const t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');
   t.addEventListener('click',()=>{const o=l.classList.toggle('open');t.setAttribute('aria-expanded',o)});
   l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.setAttribute('aria-expanded','false')}));
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*60)+'ms';io.observe(el)});
 </script>
 </body>
 </html>
